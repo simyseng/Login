@@ -45,12 +45,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <state key="normal" title="Forget User Name"/>
+                                <connections>
+                                    <action selector="forgetUsernameButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XrL-jb-lvN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qrd-fz-fNZ">
                                 <rect key="frame" x="252" y="470" width="81" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <state key="normal" title="Forget Password"/>
+                                <connections>
+                                    <action selector="forgetPasswordButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z97-4c-VLm"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -58,7 +64,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="Login" largeTitleDisplayMode="always" id="XNt-MD-9pj"/>
                     <connections>
+                        <outlet property="forgetPasswordButton" destination="qrd-fz-fNZ" id="tv3-Kc-XpO"/>
+                        <outlet property="forgetUsernameButton" destination="fjU-qo-eEn" id="Anv-cp-sQb"/>
                         <outlet property="usernameTextField" destination="KSd-Hi-oLc" id="qLi-Gb-LpL"/>
+                        <segue destination="Csz-MB-DbB" kind="show" identifier="forgetUsernameOrPassword" id="gbb-di-DoZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -100,4 +109,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="gbb-di-DoZ"/>
+    </inferredMetricsTieBreakers>
 </document>
